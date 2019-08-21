@@ -32,6 +32,7 @@
 	</dependencyManagement>
 	<modules>
 		<module>eureka</module>
+		<module>client</module>
 	</modules>
 	
 	
