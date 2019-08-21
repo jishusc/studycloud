@@ -33,6 +33,7 @@
 	<modules>
 		<module>eureka</module>
 		<module>client</module>
+		<module>product</module>
 	</modules>
 	
 	
