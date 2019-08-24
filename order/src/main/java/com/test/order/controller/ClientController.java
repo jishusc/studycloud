@@ -13,9 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ClientController {
 
+//	@Autowired
+//	private LoadBalancerClient loadBalancerClient;
 	@Autowired
-	private LoadBalancerClient loadBalancerClient;
-
+	private RestTemplate restTemplate;
 	@GetMapping("/getMsgFromProduct")
 	public String getMsgFromProduct() {
 		String response = "";
@@ -25,16 +26,15 @@ public class ClientController {
 //		log.info("getMsgFromProduct:{}", response);
 //		return response;
 		// 第二种方式 通过loadBalancerClient
-		for(int i=0;i<10;i++) {
-			ServiceInstance serviceInstance = loadBalancerClient.choose("product");
-			log.info("serviceInstance={}", serviceInstance);
-			String url = String.format("http://%s:%s/msg", serviceInstance.getHost(), serviceInstance.getPort());
-			RestTemplate restTemplate = new RestTemplate();
-			response = restTemplate.getForObject(url, String.class);
-			log.info("getMsgFromProduct:{}", response);
-		}
+//		ServiceInstance serviceInstance = loadBalancerClient.choose("product");
+//		log.info("serviceInstance={}", serviceInstance);
+//		String url = String.format("http://%s:%s/msg", serviceInstance.getHost(), serviceInstance.getPort());
+//		RestTemplate restTemplate = new RestTemplate();
+//		response = restTemplate.getForObject(url, String.class);
+//		log.info("getMsgFromProduct:{}", response);
+//		return response;
 		
-		return response;
-
+		//使用RestTemplate的第三种方式
+		return restTemplate.getForObject("http://product/msg", String.class);
 	}
 }
