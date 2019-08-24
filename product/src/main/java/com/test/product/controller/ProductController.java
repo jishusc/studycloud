@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.product.VO.ProductInfoVo;
@@ -18,6 +17,7 @@ import com.test.product.VO.ProductVo;
 import com.test.product.VO.ResultVO;
 import com.test.product.dataobject.ProductCategory;
 import com.test.product.dataobject.ProductInfo;
+import com.test.product.dto.CartDTO;
 import com.test.product.service.CategoryService;
 import com.test.product.service.ProductService;
 import com.test.product.utils.ResultVOUtil;
@@ -69,6 +69,11 @@ public class ProductController {
 	@PostMapping("/listForOrder")
 	public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
 		return productService.findList(productIdList);
+	}
+	
+	@PostMapping("/decreaseStock")
+	public void decreaseStock(@RequestBody List<CartDTO> cartDTOList) {
+		productService.decreaseStock(cartDTOList);
 	}
 
 }

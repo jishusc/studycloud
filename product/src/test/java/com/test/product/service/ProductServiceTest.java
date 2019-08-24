@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.test.product.ProductApplicationTest;
 import com.test.product.dataobject.ProductInfo;
+import com.test.product.dto.CartDTO;
 
 @Component
 public class ProductServiceTest extends ProductApplicationTest {
@@ -26,6 +27,11 @@ public class ProductServiceTest extends ProductApplicationTest {
 	public void testFindList() {
 		List<ProductInfo> lists = productService.findList(Arrays.asList(new String[] {"157875196366160022"}));
 		Assert.assertTrue(lists.size() > 0);
+	}
+	
+	@Test
+	public void decreaseStock() {
+		productService.decreaseStock(Arrays.asList(new CartDTO("157875196366160022",2)));
 	}
 
 }

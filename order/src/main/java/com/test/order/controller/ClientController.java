@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.gson.Gson;
 import com.test.order.client.ProductClient;
 import com.test.order.dataobject.ProductInfo;
+import com.test.order.dto.CartDTO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,5 +30,11 @@ public class ClientController {
 		List<ProductInfo> lists = productClient.listForOrder(Arrays.asList(new String[] {"157875196366160022"}));
 		log.info(lists.toString());
 		return lists;
+	}
+	
+	@GetMapping("/decreaseProductStock")
+	public String decreaseProductStock() {
+		productClient.decreaseStock(Arrays.asList(new CartDTO("157875196366160022", 3), new CartDTO("157875227953464068", 2)));
+		return "ok";
 	}
 }
