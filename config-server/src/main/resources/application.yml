@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-server  cloud:    config:      server:        git:          uri: https://gitee.com/jishusc/config-repo.git
+          username: jishusc
+          password: 7VStSrKG@M.3mFr
+          basedir: /config-reposerver:  port: 9300
+eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
+
