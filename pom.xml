@@ -36,6 +36,7 @@
 		<module>product</module>
 		<module>order</module>
 		<module>config-server</module>
+		<module>api-gateway</module>
 	</modules>
 	
 	
