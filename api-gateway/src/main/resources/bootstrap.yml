@@ -3,7 +3,24 @@ spring:
     name: api-gateway  cloud:    config:      discovery:        enabled: true
         service-id: config-server
       profile: dev
-        
+    sentinel:
+      log:
+        dir: ./logs
+        switch-pid: true
+      transport:
+        dashboard: Yxl20181644:8080
+      datasource:
+        flow:
+          apollo:
+            namespace-name: application
+            flow-rules-key: ${spring.application.name}-flow-rules
+            ruleType: flow
+      zuul:
+        enabled: true
+        order:
+          pre: 10000
+          post: 0
+          error: -1  
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
 apollo:

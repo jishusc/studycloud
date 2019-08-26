@@ -14,13 +14,16 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-			<version>2.1.0.RELEASE</version>
+		</dependency>
+		<!-- Sentinel Spring Cloud Zuul AutoConfiguration -->
+		<dependency>
+		    <groupId>com.alibaba.cloud</groupId>
+		    <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
 		</dependency>
 		<!-- sentinel 使用了apollo作为数据源 -->
 		<dependency>
 			<groupId>com.alibaba.csp</groupId>
 			<artifactId>sentinel-datasource-apollo</artifactId>
-			<version>1.6.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
