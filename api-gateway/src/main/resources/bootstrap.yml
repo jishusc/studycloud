@@ -10,11 +10,11 @@ spring:
       transport:
         dashboard: Yxl20181644:8080
       datasource:
-        flow:
+        gw-flow:
           apollo:
             namespace-name: application
-            flow-rules-key: ${spring.application.name}-flow-rules
-            ruleType: flow
+            flow-rules-key: ${spring.application.name}-gw-flow-rules
+            ruleType: gw-flow
         gw-api:
           apollo:
             namespace-name: application
