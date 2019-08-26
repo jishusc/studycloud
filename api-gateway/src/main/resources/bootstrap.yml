@@ -15,6 +15,11 @@ spring:
             namespace-name: application
             flow-rules-key: ${spring.application.name}-flow-rules
             ruleType: flow
+        gw-api:
+          apollo:
+            namespace-name: application
+            flow-rules-key: ${spring.application.name}-gateway-apis
+            ruleType: gw-api-group
       zuul:
         enabled: true
         order:
