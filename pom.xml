@@ -43,6 +43,7 @@
 		<module>order</module>
 		<module>config-server</module>
 		<module>api-gateway</module>
+		<module>simple-gateway-demo</module>
 	</modules>
 	
 	
