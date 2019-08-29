@@ -7,5 +7,22 @@ spring:
         enabled: true
         service-id: config-server
       profile: dev    
+    sentinel:
+      log:
+        dir: ./logs
+        switch-pid: true
+      transport:
+        dashboard: http://localhost:7002
+      datasource:
+        flow:
+          apollo:
+            namespace-name: application
+            flow-rules-key: ${spring.application.name}-flow-rules
+            default-flow-rule-value: 
+            rule-type: flow  
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
+apollo:
+  meta: http://apollodev.stosystem.com:58080
+app:
+  id: YW04_004
