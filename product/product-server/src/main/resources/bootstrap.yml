@@ -9,7 +9,7 @@ spring:
       profile: dev    
     sentinel:
       log:
-        dir: ./logs
+        dir: ./logs/
         switch-pid: true
       transport:
         dashboard: http://localhost:7002

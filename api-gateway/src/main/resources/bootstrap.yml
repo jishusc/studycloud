@@ -8,7 +8,7 @@ spring:
         dir: ./logs
         switch-pid: true
       transport:
-        dashboard: Yxl20181644:8080
+        dashboard: Yxl20181644:7002
       datasource:
         gw-flow:
           apollo:
