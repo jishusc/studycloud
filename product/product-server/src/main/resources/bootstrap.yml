@@ -12,7 +12,7 @@ spring:
         dir: ./logs/
         switch-pid: true
       transport:
-        dashboard: http://localhost:7002
+        dashboard: http://10.33.74.155:7001
       datasource:
         flow:
           apollo:
@@ -23,6 +23,6 @@ spring:
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
 apollo:
-  meta: http://apollodev.stosystem.com:58080
+  meta: http://192.168.122.72:8080
 app:
-  id: YW04_004
+  id: YW01_product
