@@ -36,3 +36,13 @@ apollo:
   meta: http://10.36.30.90:8080
 app:
   id: YW04_002 #应用名:  sentinel-client-test
+  
+zuul:
+  ignored-services:
+  routes:
+    product:
+      path: /product/**
+      service-id: product
+    product_api:
+      path: /product_api/**
+      service-id: product
