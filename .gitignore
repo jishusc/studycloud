@@ -19,6 +19,7 @@ buildNumber.properties
 application.pid
 
 logs/
+lib/
 
 ### STS ###
 .apt_generated

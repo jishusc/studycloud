@@ -12,7 +12,8 @@ spring:
         dir: ./logs/
         switch-pid: true
       transport:
-        dashboard: http://10.33.74.155:7001
+        #dashboard: http://10.33.74.177:7001
+        dashboard: http://192.168.1.203:7001
       datasource:
         flow:
           apollo:
@@ -23,6 +24,6 @@ spring:
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
 apollo:
-  meta: http://192.168.122.72:8080
+  meta: http://10.36.30.90:8080
 app:
-  id: YW01_product
+  id: YW04_002 #应用名:  sentinel-client-test

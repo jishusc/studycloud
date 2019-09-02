@@ -1,3 +1,5 @@
+#server:
+#  port: 9400
 spring:
   application:
     name: api-gateway  cloud:    config:      discovery:        enabled: true
@@ -5,10 +7,11 @@ spring:
       profile: dev
     sentinel:
       log:
-        dir: ./logs
+        dir: ./logs/
         switch-pid: true
       transport:
-        dashboard: Yxl20181644:7002
+        #dashboard: http://10.33.74.177:7001
+        dashboard: http://192.168.1.203:7001
       datasource:
         gw-flow:
           apollo:
@@ -29,8 +32,6 @@ spring:
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
 apollo:
-  bootstrap:
-    enabled: true
-  meta: http://apollodev.stosystem.com:58080
+  meta: http://10.36.30.90:8080
 app:
-  id: YW04_005      
+  id: YW04_002 #应用名:  sentinel-client-test

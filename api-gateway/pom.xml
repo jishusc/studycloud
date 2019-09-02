@@ -13,7 +13,6 @@
 		<!-- sentinel 自动配置 -->
 		<!-- Sentinel Spring Cloud Zuul AutoConfiguration -->
 		<!-- sentinel 使用了apollo作为数据源 -->
-		<!-- 
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
@@ -26,7 +25,6 @@
 			<groupId>com.alibaba.csp</groupId>
 			<artifactId>sentinel-datasource-apollo</artifactId>
 		</dependency>
-		 -->
 		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
