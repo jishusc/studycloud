@@ -14,17 +14,20 @@ spring:
       transport:
         #dashboard: http://10.33.74.177:7001
         #dashboard: http://192.168.1.203:7001
-        dashboard: http://vm1:7001
+        dashboard: http://10.11.2.53:7001
       datasource:
         flow:
           apollo:
             namespace-name: application
             flow-rules-key: ${spring.application.name}-flow-rules
             default-flow-rule-value: 
-            rule-type: flow  
+            rule-type: flow 
 eureka:  client:    service-url:      defaultZone: http://vm1:8761/eureka
 
 apollo:
-  meta: http://10.36.30.90:8080
+  meta: http://10.36.30.90:8081
 app:
   id: YW04_002 #应用名:  sentinel-client-test
+logging:
+  level:
+    root: info

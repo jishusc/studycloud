@@ -12,15 +12,26 @@
 		<sentinel.transport.simple.http.sto>1.7.0-sto</sentinel.transport.simple.http.sto>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>com.alibaba.csp</groupId>
-			<artifactId>sentinel-datasource-apollo</artifactId>
-		</dependency>	
+		<!-- 以下2个jar有修改，需要覆盖掉开源版本的 -->
 		<dependency>
 			<groupId>com.alibaba.csp</groupId>
 			<artifactId>sentinel-transport-simple-http</artifactId>
 			<version>${sentinel.transport.simple.http.sto}</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-transport-common</artifactId>
+			<version>${sentinel.transport.simple.http.sto}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.58</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-apollo</artifactId>
+		</dependency>		
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
@@ -35,8 +46,6 @@
 		    <groupId>com.alibaba.cloud</groupId>
 		    <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
 		</dependency>
-
-			 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
